@@ -98,4 +98,4 @@ def pre_processing_data(df):
     X_train, y_train = smote_enn.fit_resample(X_train, y_train)
 
 
-    return X_train, y_train, X_test, y_testa
+    return X_train, y_train, X_test, y_test
