@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+from imblearn.combine import SMOTEENN
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
@@ -93,6 +93,9 @@ def pre_processing_data(df):
     y_train = df['Survived']
     X_test = test_df.drop('Survived', axis=1)
     y_test = test_df['Survived']
+
+    smote_enn = SMOTEENN(sampling_strategy='auto', random_state=42 )
+    X_train, y_train = smote_enn.fit_resample(X_train, y_train)
 
 
     return X_train, y_train, X_test, y_testa
