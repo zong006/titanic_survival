@@ -1,5 +1,6 @@
-A simple machine learning project on a classification task with a slightly imbalanced target class. 
+#### Summary
 
+A Random Forest classification model in ScikitLearn to predict survivors of a shipwreck, achieving a good performance with an F1 score exceeding 0.75 across all classes.
 
 #### DataSet 
 The dataset used here for predicting which passengers survives is from the following Kaggle URL :
